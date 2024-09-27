@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> HotFlix-Movies</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+
+</head>
+
+<style>
+
+
+a{
+ color: white;
+}
+
+
+.head{
+width:100%;
+height:100px;
+position: ;
+
+}
+
+.top{
+width:101.6%;  
+height:360px;
+background-image:url('20493553.jpg');
+background-attachment: fixed;
+background-repeat: no-repeat;
+margin-top:-1.5%;
+margin-left:-1%;
+}
+p.a{
+  width:40%;
+  height:20px;
+  font-size:23px;
+  margin-top: 50%;
+    padding: 15px;
+  background-color:rgb(110, 3, 3);
+  margin-left:5%;
+  color:white;
+  
+}
+button{
+  width:25%;
+  height:50px;
+  font-size:20px;
+  background-color:blue;
+  margin-left:5%;
+  color:white;
+  
+}
+
+button:hover{
+background-color:orange;
+color:white;
+}
+
+
+.image-container {
+  position: relative;
+  margin-left: 10%;
+
+  border-color:  rgb(255, 255, 255);
+  width: 23%; /* Adjust the width as needed */
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:87.4%;
+  height: 90.5%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity as desired */
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  
+}
+
+.image-container:hover .content {
+  background-color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+
+
+
+
+
+.bar {
+  background-color: rgb(245, 193, 97);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+}
+
+
+.barr {
+  background-color: red;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+}
+
+
+
+nav{
+  padding: 2px;
+  margin-left: 10%;
+  width: 80%;
+}
+
+
+.bar li {
+  height: 100%;
+  width: 150px;
+  border-right: 1px solid rgb(235, 177, 69);
+}
+
+.bar li a {
+  color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 15px;
+}
+
+.tooltip-text {
+  padding: 6px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  position: absolute;
+  border-radius: 5px;
+  width:30em;
+  height: 30em;
+  text-align: center;
+  display: block;
+  left: -10px;
+  visibility: hidden;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+
+  left: 20px;
+  margin-top: -1%;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid #333;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+
+
+ .search {
+display: flex;
+height: 25px;
+padding: 15px;
+} 
+.search > input {
+
+flex-grow: 1;
+border: 0;
+padding: 0.5rem 1rem;
+font-size: 1rem;
+} 
+.search > input:focus {
+outline: none;
+} 
+.search > button {
+height: 25px;
+border: 0;
+text-align: center;
+cursor: pointer;
+font-size: 1rem;
+margin-left: -1%;
+background: black;
+} 
+.bottom {
+margin-top: 0px;
+font-size: 14px;
+
+}
+
+.button:hover{
+  color:white;
+}
+.grid-details{
+  display: flex;
+}
+</style>
+
+<section class="" data-id="497f7a0" data-element_type="section" data-settings="{&quot;jet_parallax_layout_list&quot;:[{&quot;jet_parallax_layout_image&quot;:{&quot;url&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;},&quot;_id&quot;:&quot;225207e&quot;,&quot;jet_parallax_layout_speed&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;50&quot;,&quot;sizes&quot;:[]},&quot;jet_parallax_layout_bg_x&quot;:&quot;50&quot;,&quot;jet_parallax_layout_bg_y&quot;:&quot;50&quot;,&quot;jet_parallax_layout_image_tablet&quot;:{&quot;url&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;},&quot;jet_parallax_layout_image_mobile&quot;:{&quot;url&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;},&quot;jet_parallax_layout_type&quot;:&quot;scroll&quot;,&quot;jet_parallax_layout_direction&quot;:null,&quot;jet_parallax_layout_fx_direction&quot;:null,&quot;jet_parallax_layout_z_index&quot;:&quot;&quot;,&quot;jet_parallax_layout_bg_x_tablet&quot;:&quot;&quot;,&quot;jet_parallax_layout_bg_x_mobile&quot;:&quot;&quot;,&quot;jet_parallax_layout_bg_y_tablet&quot;:&quot;&quot;,&quot;jet_parallax_layout_bg_y_mobile&quot;:&quot;&quot;,&quot;jet_parallax_layout_bg_size&quot;:&quot;auto&quot;,&quot;jet_parallax_layout_bg_size_tablet&quot;:&quot;&quot;,&quot;jet_parallax_layout_bg_size_mobile&quot;:&quot;&quot;,&quot;jet_parallax_layout_animation_prop&quot;:&quot;transform&quot;,&quot;jet_parallax_layout_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;]}],&quot;animation&quot;:&quot;fadeIn&quot;}">
+
+<body style=" color: aliceblue;
+background-attachment: fixed;
+background-repeat: no-repeat; background-image: url('https://images-na.ssl-images-amazon.com/images/S/pv-target-images/a342ae85816eb9705c183334ebf2ff937bf7e423e23eae7d2e00978935d655ab._RI_.jpg');">
+
+  
+<div style="width:100%; height:20px; background-color:lightpink; margin-top:-0.5%"></div>
+<div class="head">
+  
+  <nav>
+  <ul class="bar">
+    <li><a href="#" class="active">Home</a></li>
+    
+        <li><a href="TV.html">Live  <i class="fas fa-stream"></i></i></a></li>
+
+      
+<li><div class="tooltip">
+  <span style="margin-left:55%">  Movies</span><br><br>
+    <div class="tooltip-text">  </div>
+</div>
+      </li>
+
+      <li><div class="tooltip" >
+  <span>Country Movies</span><br><br>
+</div>
+      </li>
+
+      <li><div class="tooltip">
+  <span>Documentary</span><br><br>
+    <div class="tooltip-text">  </div>
+</div>
+      </li>
+    
+<form>
+<div class="search">
+<input type="text" placeholder="Search products" />
+<button type="submit">Search</button>
+</div>
+
+  </nav>
+
+<div style="width:100%; height:10px; background-color:red; margin-top:2%"></div>
+</div>
+
+
+
+ <div class="top">
+
+<br><br>
+  <h2 style="margin-left:8%; color:red"> Welcome to HotFLIX Movies</h2>  
+
+ <p style=" margin-left:8%; color:rgb(255, 255, 255);">Enjoy exclusive Originals as well as popular movies and TV Shows. <br>Join HotFLIX Movies now for 5,000 Rwf per month<p>
+ 
+ 
+  <br><button id="signin-button">HotFLIX Member? Sign in</button>
+ <div style="margin-left: 70%; margin-top:-12%"><a href="#"> <img src="play.png" width="40%"></a></div>
+
+ <div id="signin-modal">
+   <div id="signin-content">
+     <h1>Enjoy your Digtal Life</h1>
+
+     <img style="margin-left: 25%;" src="logo.png">
+     <br><br><br><form>
+       <label for="username">Username:</label>
+       <input style="width: 80%; height: 30px; margin-left: 3%;" type="text" id="username" name="username" required><br><br><br>
+       
+       <label for="password">Password:</label>
+       <input style="width: 80%; height: 30px; margin-left:3%" type="password" id="password" name="password" required>
+       <br><br><br>
+       <button class="sign" type="submit">Sign In</button>
+     </form>
+
+<br><br>
+<a style="color: white; margin-left: 27%; " class="noneunderline" href="donate.html">Forget your Password</a>
+
+   </div>
+ </div>
+</div>
+ 
+ <script>
+   document.getElementById("signin-button").addEventListener("click", function() {
+ document.getElementById("signin-modal").style.display = "block";
+});
+
+document.getElementById("signin-modal").addEventListener("click", function(event) {
+ if (event.target == document.getElementById("signin-modal")) {
+   document.getElementById("signin-modal").style.display = "none";
+ }
+});
+
+ </script>
+ 
+<div style="width:100%; height: 27em; background-color: white; border-top:5px solid black;">
+  
+  <br><p align="center" style="color:grey;"> A lot of people are watching these! You may want to check them out. <a href="" style="width:5em; height: 30px; background-color: white; border-color: green; color:green;"> View more</a></p>
+
+<lu style="
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+ border-color: 5px solid black;
+  ">
+<li style="margin-left:7%; margin-top:%">
+
+<p style="color:orange;"> &nbsp;&nbsp;   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShgihMjQYA_Jt2aiqTheU6KynRh34qDzvkFX1c-5I3zp-aKmV0OAU1hhG7ao6y_OxHZHs&usqp=CAU" width="4%">  </p>
+  <img  src="https://pbs.twimg.com/profile_images/1272551170284892160/FuO9W4mL_400x400.jpg" width="55%" height="250px">
+<p style="margin-left:12%; color:white; margin-top: -0.5%;">John Wick</p>
+</li>
+
+<li style="margin-left:-8%">
+
+<p style="color:orange;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShgihMjQYA_Jt2aiqTheU6KynRh34qDzvkFX1c-5I3zp-aKmV0OAU1hhG7ao6y_OxHZHs&usqp=CAU" width="4%">  </p>
+  <img src="https://static.wikia.nocookie.net/rwanda/images/7/74/SEBURIKOKO.jpg/revision/latest?cb=20210226053849" width="55%" height="250px">
+<p style="margin-left:12%; color:white; margin-top: -0.5%;">John Wick</p>
+</li>
+
+<li style="margin-left:-8%">
+
+<p style="color:orange;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShgihMjQYA_Jt2aiqTheU6KynRh34qDzvkFX1c-5I3zp-aKmV0OAU1hhG7ao6y_OxHZHs&usqp=CAU" width="4%">  </p>
+  <img src="https://static.wikia.nocookie.net/rwanda/images/b/b8/Impanga.jpg/revision/latest?cb=20210306003216" width="55%" height="250px">
+<p style="margin-left:12%; color:white; margin-top: -0.5%;">John Wick</p>
+</li>
+<li style="margin-left:-8%">
+
+<p style="color:orange;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShgihMjQYA_Jt2aiqTheU6KynRh34qDzvkFX1c-5I3zp-aKmV0OAU1hhG7ao6y_OxHZHs&usqp=CAU" width="4%">  </p>
+  <img src="https://pbs.twimg.com/profile_images/1507338399820222468/D_l3b8md_400x400.jpg" width="55%" height="250px">
+<p style="margin-left:12%; color:gray; margin-top: -0.5%;">City Maid</p>
+</li>
+<li style="margin-left:-8%">
+
+<p style="color:orange;"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShgihMjQYA_Jt2aiqTheU6KynRh34qDzvkFX1c-5I3zp-aKmV0OAU1hhG7ao6y_OxHZHs&usqp=CAU" width="4%" >  </p>
+  <img src="https://i.ytimg.com/vi/ptHHqkMaFgE/hqdefault.jpg" width="55%" height="250px">
+<p style="margin-left:10%; color:gray; margin-top: -0.5%;">Umujinya W'umusirikare</p>
+</li>
+</lu>
+
+</div>
+
+
+
+
+<div style="width:100%;margin-left: %; height: 30em; background-color: black; margin-top: -1%;">
+
+   <h1 style="margin-left:5%; padding: 10px; font-size: 30px; color:grey;"> Popularity <i style="font-size: 20px; font-family: initial;"> Most view in Last 30 days</i><p style="margin-top:-0.1%; font-size:16px; color: blanchedalmond;">Page 1 to 10 (Result 105)</p></h1>
+
+
+ 
+<img style="margin-left:7%; margin-top: -2%; border-radius:15px" src="https://eastflix.tv/storage/images/item/episode/landscape//2023/03/25/641f44dcc95141679770844.png" width="40%" height="80%" >
+
+<div style="margin-left: 57%;margin-top: -27%; color:;">
+<P style="color: ; font-size: 20px;">Wrath of Soldier<button style="width:20%; height: 35px; margin-left: 1%; font-size: 15px;  background-color: darkorange;color: black; border-color:darkorange;">Most Wached</button> </p> 
+
+<p>2023 &nbsp;&nbsp;  Wrath of Soldier&nbsp;&nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShgihMjQYA_Jt2aiqTheU6KynRh34qDzvkFX1c-5I3zp-aKmV0OAU1hhG7ao6y_OxHZHs&usqp=CAU" width="3%">  </p>
+
+<hr style="width:50%; height: 3px; background-color:grey; margin-left: -5%;">
+
+<hr style="width:50%; background-color:; margin-left: -5%; margin-top: -0.8%;">
+
+<br><p><i>The Black Panther film series is a cycle of films set <br>in the Marvel Cinematic Universe focusing on the fictitious <br>Kingdom of Wakanda and its hero/king Black Panther. <br>It consists of two films so far in Black Panther and Black <br>Panther: Wakanda Forever. Actor Chadwick Boseman <br> originated the title character in.</i>
+</p>
+
+</div>
+
+  <a style="margin-left: 80%;padding: 10px; width:10px;height: 20px;background-color: darkred;" href="popula.html">View Most Movies</a>
+
+
+</div></div></div>
+
+ 
+
+
+ 
+  
+
+
+<h2 syle="margin-left:3%; margin-top:7%;  color: black">Action</h2> 
+
+<div style="width:100%; height:100px">
+<div  class="image-container" style="width:23%; height:230px; background-color:black; margin-left:20%; "> 
+<img style="opacity: 0.5;" src="https://i.ytimg.com/vi/WBEM3Wv8u-Y/maxresdefault.jpg" width="100%" height="100%">
+<div class="content" style="height: 82%;">
+    
+    <br><br><a href="$"><img style="margin-left:30%;" src="play.png" width="50%">
+</div>
+<P align="center"> Umurinzi Series</P></a> 
+ 
+</div>
+
+<div class="image-container" style="width:23%; height:230px; background-color:black; margin-left:47%; margin-top:-17.3%">
+  <img style="opacity: ;" src="https://i.ytimg.com/vi/YPLo5mhU2mQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDII3edX1lTWJ788rqPsUZvtSSCHQ" width="100%" height="100%">
+<div class="content" style="height: 82%;">
+    
+    <br><br><a href="$"><img style="margin-left:30%;" src="play.png" width="50%">
+</div>
+ <p align="center"> Maitre Nzovu</p></a> 
+ 
+</div>
+
+</div>
+</div>
+</div>
+</div></div>
+
+
+
+
+  <script async data-id="83412" src="https://cdn.widgetwhats.com/script.min.js"></script>
+
+
+
+<!--Oct 06, 2021-->
+<!--<script async src="https://s.widgetwhats.com/wwwa.js" data-wwwa="5083"></script>-->
+
+
+<!--Nov 12-->
+<script>
+(function (w, d, s, u) {
+w.gbwawc = {
+url: u,
+options: {
+    waId: "+250788481368",
+    siteName: "Thierry",
+    siteTag: "Available",
+    siteLogo: "https://thumbs.dreamstime.com/b/film-camera-icon-black-background-flat-style-vector-illustration-168421084.jpg",
+    widgetPosition: "RIGHT",
+    triggerMessage: "Twandikire",
+    welcomeMessage: "Ikaze kuri HotFLIX Movies",
+    brandColor: "#25D366",
+    messageText: "Tugufashe gute?",
+    replyOptions: ['Uko bishyura abonnement','Uko bafungura account','Ibindi'],
+},
+};
+var h = d.getElementsByTagName(s)[0],
+j = d.createElement(s);
+j.async = true;
+j.src = u + "/whatsapp-widget.min.js?_=" + Math.random();
+h.parentNode.insertBefore(j, h);
+})(window, document, "script", "https://waw.gallabox.com");
+// })(window, document, "script", "https://wa.me/250786150027");
+</script>
+
+</section>
+
+</body>
+</html>
+
+
+
+
+
